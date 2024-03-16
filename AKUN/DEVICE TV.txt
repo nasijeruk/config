@@ -1,0 +1,85 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+proxies:
+
+  - name: SG HE
+    server: 104.21.233.134
+    port: 443
+    type: trojan
+    password: 797d50f0-e384-11ee-9ba5-1239d0255272
+    skip-cert-verify: true
+    sni: sg3-trojan.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg3-trojan.bonds.id
+    udp: true
+
+  - name: SG MELBI
+    server: 104.21.233.134
+    port: 443
+    type: trojan
+    password: 992e85e0-e384-11ee-9674-1239d0255272
+    skip-cert-verify: true
+    sni: sg-4.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-4.test3.net
+    udp: true
+
+  - name: ASIA Trojan-gRPC
+    server: 104.21.233.134
+    port: 443
+    type: trojan
+    password: 51c52890-e383-11ee-b834-205c6d5f5d78
+    skip-cert-verify: true
+    sni: asia1.fufo.org
+    network: grpc
+    grpc-opts:
+      grpc-service-name: trgrpc
+    udp: true
+
+proxy-groups:
+  - name: AKUN VPN
+    type: select
+    proxies:
+      - SG HE
+      - SG MELBI
+      - ASIA Trojan-gRPC
+      - DIRECT
+rules:
+  - MATCH,AKUN VPN
