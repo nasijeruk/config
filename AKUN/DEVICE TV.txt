@@ -82,4 +82,5 @@ proxy-groups:
       - ASIA Trojan-gRPC
       - DIRECT
 rules:
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,SG HE
   - MATCH,AKUN VPN
