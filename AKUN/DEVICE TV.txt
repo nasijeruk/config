@@ -78,9 +78,8 @@ proxy-groups:
     type: select
     proxies:
       - SG HE
-      - SG MELBI
       - ASIA Trojan-gRPC
       - DIRECT
 rules:
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,SG HE
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,SG MELBI
   - MATCH,AKUN VPN
