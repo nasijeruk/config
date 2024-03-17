@@ -65,7 +65,7 @@ proxies:
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 18d3a890-e385-11ee-b738-205c6d5f5d78
+    password: 1df46850-e4a8-11ee-b038-205c6d5f5d78
     skip-cert-verify: true
     sni: asia1.fufo.org
     network: grpc
