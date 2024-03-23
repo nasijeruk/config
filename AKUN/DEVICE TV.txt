@@ -37,7 +37,7 @@ proxies:
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 797d50f0-e384-11ee-9ba5-1239d0255272
+    password: 3481df40-e920-11ee-80cd-1239d0255272
     skip-cert-verify: true
     sni: sg3-trojan.bonds.id
     network: ws
