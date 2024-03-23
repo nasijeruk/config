@@ -70,7 +70,7 @@ proxies:
     sni: asia1.fufo.org
     network: ws
     ws-opts:
-      path: /howdy
+      path: /trojanws
       headers:
         Host: asia1.fufo.org
     udp: true
