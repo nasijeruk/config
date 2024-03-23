@@ -81,6 +81,7 @@ proxy-groups:
     proxies:
       - SG HE
       - ASIA Trojan
+      - DIRECT
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,SG MELBI
