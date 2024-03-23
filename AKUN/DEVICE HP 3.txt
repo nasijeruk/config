@@ -37,7 +37,7 @@ proxies:
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 7cd32bc0-e8e8-11ee-8877-1239d0255272
+    password: aacb0ea0-e920-11ee-aced-1239d0255272
     skip-cert-verify: true
     sni: sg3-trojan.bonds.id
     network: ws
@@ -65,7 +65,7 @@ proxies:
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: fa603440-e8e3-11ee-b334-205c6d5f5d78
+    password: b1d48990-e920-11ee-b234-205c6d5f5d78
     skip-cert-verify: true
     sni: asia1.fufo.org
     network: ws
