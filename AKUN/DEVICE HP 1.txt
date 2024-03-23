@@ -80,7 +80,7 @@ proxy-groups:
     type: select
     proxies:
       - SG HE
-      - ASIA Trojan-gRPC
+      - ASIA Trojan
       - DIRECT
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,SG MELBI
