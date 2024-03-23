@@ -47,18 +47,18 @@ proxies:
         Host: sg3-trojan.bonds.id
     udp: true
 
-  - name: ASIA Trojan
+  - name: SG Trojan
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 04aae300-e806-11ee-b334-205c6d5f5d78
+    password: 5b21d868-45a3-4a72-b39f-1a8ecca49726
     skip-cert-verify: true
-    sni: asia1.fufo.org
+    sni: sg2trws.createv2ray.com
     network: ws
     ws-opts:
       path: /trojanws
       headers:
-        Host: asia1.fufo.org
+        Host: sg2trws.createv2ray.com
     udp: true
 
  - name: US
@@ -80,7 +80,7 @@ proxy-groups:
     type: select
     proxies:
       - SG HE
-      - ASIA Trojan
+      - SG Trojan
       - DIRECT
 
 rules:
