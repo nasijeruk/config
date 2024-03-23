@@ -31,6 +31,7 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
+
 proxies:
 
   - name: SG HE
@@ -47,18 +48,18 @@ proxies:
         Host: sg3-trojan.bonds.id
     udp: true
 
-  - name: ASIA Trojan
+  - name: SG Trojan
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: b1d48990-e920-11ee-b234-205c6d5f5d78
+    password: dde788d2-6da4-405a-b823-ab22197bcc27
     skip-cert-verify: true
-    sni: asia1.fufo.org
+    sni: sg2trws.createv2ray.com
     network: ws
     ws-opts:
       path: /trojanws
       headers:
-        Host: asia1.fufo.org
+        Host: sg2trws.createv2ray.com
     udp: true
 
  - name: US
@@ -80,7 +81,7 @@ proxy-groups:
     type: select
     proxies:
       - SG HE
-      - ASIA Trojan
+      - SG Trojan
       - DIRECT
 
 rules:
