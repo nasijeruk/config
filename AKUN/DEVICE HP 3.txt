@@ -61,7 +61,7 @@ proxies:
         Host: sg-4.test3.net
     udp: true
 
-  - name: ASIA Trojan-gRPC
+  - name: ASIA Trojan
     server: 104.21.233.134
     port: 443
     type: trojan
@@ -80,7 +80,7 @@ proxy-groups:
     type: select
     proxies:
       - SG HE
-      - ASIA Trojan-gRPC
+      - ASIA Trojan
       - DIRECT
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,SG MELBI
