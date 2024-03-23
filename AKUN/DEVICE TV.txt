@@ -47,32 +47,32 @@ proxies:
         Host: sg3-trojan.bonds.id
     udp: true
 
-  - name: SG MELBI
+  - name: SG Trojan
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 992e85e0-e384-11ee-9674-1239d0255272
+    password: 49f6a6cd-1ec1-43ac-bd23-decfc5dd9095
     skip-cert-verify: true
-    sni: sg-4.test3.net
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: sg-4.test3.net
-    udp: true
-
-  - name: ASIA Trojan
-    server: 104.21.233.134
-    port: 443
-    type: trojan
-    password: 59eca270-e920-11ee-b339-205c6d5f5d78
-    skip-cert-verify: true
-    sni: asia1.fufo.org
+    sni: sg2trws.createv2ray.com
     network: ws
     ws-opts:
       path: /trojanws
       headers:
-        Host: asia1.fufo.org
+        Host: sg2trws.createv2ray.com
+    udp: true
+
+- name: US
+    server: 104.21.233.134
+    port: 443
+    type: trojan
+    password: 60357bd0-e931-11ee-a851-1239d0255272
+    skip-cert-verify: true
+    sni: us1.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: us1.test3.net
     udp: true
 
 proxy-groups:
@@ -80,9 +80,9 @@ proxy-groups:
     type: select
     proxies:
       - SG HE
-      - ASIA Trojan
+      - SG Trojan
       - DIRECT
 
 rules:
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,SG MELBI
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,US
   - MATCH,AKUN VPN
