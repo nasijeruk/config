@@ -4,7 +4,7 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
-mode: GLOBAL
+mode: rule
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
@@ -65,16 +65,24 @@ proxies:
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: dd6c2da0-e805-11ee-b635-205c6d5f5d78
+    password: fd9b4d10-e8e6-11ee-b133-205c6d5f5d78
     skip-cert-verify: true
     sni: asia1.fufo.org
     network: ws
     ws-opts:
       path: /trojanws
       headers:
-        Host: sg-4.test3.net
+        Host: asia1.fufo.org
     udp: true
+
+proxy-groups:
+  - name: AKUN VPN
+    type: select
+    proxies:
+      - SG HE
+      - ASIA Trojan
+      - DIRECT
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,SG MELBI
-  - MATCH,GLOBAL
+  - MATCH,AKUN VPN
