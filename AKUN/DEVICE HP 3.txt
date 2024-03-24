@@ -34,7 +34,35 @@ dns:
 
 proxies:
 
-  - name: SG HE
+  - name: SG HE-1
+    server: 104.21.233.134
+    port: 443
+    type: trojan
+    password: 2adafa30-e9d6-11ee-a53c-1239d0255272
+    skip-cert-verify: true
+    sni: sg1-trojan.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg1-trojan.bonds.id
+    udp: true
+
+  - name: SG HE-2
+    server: 104.21.233.134
+    port: 443
+    type: trojan
+    password: 85cbec40-e9d6-11ee-b51c-1239d0255272
+    skip-cert-verify: true
+    sni: sg2-trojan.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg2-trojan.bonds.id
+    udp: true
+
+  - name: SG HE-3
     server: 104.21.233.134
     port: 443
     type: trojan
@@ -48,21 +76,7 @@ proxies:
         Host: sg3-trojan.bonds.id
     udp: true
 
-  - name: SG Trojan
-    server: 104.21.233.134
-    port: 443
-    type: trojan
-    password: dde788d2-6da4-405a-b823-ab22197bcc27
-    skip-cert-verify: true
-    sni: sg2trws.createv2ray.com
-    network: ws
-    ws-opts:
-      path: /trojanws
-      headers:
-        Host: sg2trws.createv2ray.com
-    udp: true
-
- - name: US
+  - name: US
     server: 104.21.233.134
     port: 443
     type: trojan
@@ -80,9 +94,9 @@ proxy-groups:
   - name: AKUN VPN
     type: select
     proxies:
-      - SG HE
-      - SG Trojan
-      - DIRECT
+      - SG HE-1
+      - SG HE-2
+      - SG HE-3
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,US
