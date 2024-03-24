@@ -96,7 +96,6 @@ proxy-groups:
       - SG HE-1
       - SG HE-2
       - SG HE-3
-      - DIRECT
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,US
