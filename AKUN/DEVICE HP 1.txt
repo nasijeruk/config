@@ -33,21 +33,21 @@ dns:
     - 112.215.203.254
 proxies:
 
-  - name: SG HE-1
+  - name: SG OBFS
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 67e98d60-e9d5-11ee-8e6f-1239d0255272
+    password: 20143740-ee17-11ee-b933-205c6d5f5d78
     skip-cert-verify: true
-    sni: sg1-trojan.bonds.id
+    sni: asia1.fufo.org
     network: ws
     ws-opts:
-      path: /howdy
+      path: /trojanws
       headers:
-        Host: sg1-trojan.bonds.id
+        Host: asia1.fufo.org
     udp: true
   
-  - name: SG HE-2
+  - name: SG HE
     server: 104.21.233.134
     port: 443
     type: trojan
@@ -59,20 +59,6 @@ proxies:
       path: /howdy
       headers:
         Host: sg2-trojan.bonds.id
-    udp: true
-
-  - name: SG HE-3
-    server: 104.21.233.134
-    port: 443
-    type: trojan
-    password: 037d7d40-e385-11ee-a040-1239d0255272
-    skip-cert-verify: true
-    sni: sg3-trojan.bonds.id
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: sg3-trojan.bonds.id
     udp: true
 
   - name: US
@@ -93,9 +79,8 @@ proxy-groups:
   - name: AKUN VPN
     type: select
     proxies:
-      - SG HE-1
-      - SG HE-2
-      - SG HE-3
+      - SG OBFS
+      - SG HE
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,US
