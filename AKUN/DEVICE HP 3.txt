@@ -52,14 +52,14 @@ proxies:
     server: 104.21.233.134
     port: 443
     type: trojan
-    password: 85cbec40-e9d6-11ee-b51c-1239d0255272
+    password: 378ee2f0-ef4e-11ee-aa8f-1239d0255272
     skip-cert-verify: true
-    sni: sg2-trojan.bonds.id
+    sni: sg3-trojan.bonds.id
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: sg2-trojan.bonds.id
+        Host: sg3-trojan.bonds.id
     udp: true
 
   - name: US
