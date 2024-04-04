@@ -83,5 +83,4 @@ proxy-groups:
       - SG HE
 
 rules:
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,US
   - MATCH,AKUN VPN
