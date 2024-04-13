@@ -76,19 +76,5 @@ proxies:
         Host: sg3-trojan.bonds.id
     udp: true
 
-  - name: US
-    server: 104.21.233.134
-    port: 443
-    type: trojan
-    password: 958d95a0-e930-11ee-bc2c-1239d0255272
-    skip-cert-verify: true
-    sni: us1.test3.net
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: us1.test3.net
-    udp: true
-
 rules:
   - MATCH,GLOBAL
