@@ -34,46 +34,34 @@ dns:
 
 proxies:
   - name: SG HE-1
-    server: 104.21.233.134
+    server: sg1-trojan.bonds.id
     port: 443
     type: trojan
     password: cc8a4c00-f977-11ee-b0e7-1239d0255272
     skip-cert-verify: true
-    sni: sg1-trojan.bonds.id
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: sg1-trojan.bonds.id
+    sni: shp.ee
+    network: tcp
     udp: true
 
 
   - name: SG HE-2
-    server: 104.21.233.134
+    server: sg2-trojan.bonds.id
     port: 443
     type: trojan
     password: 83922df0-f977-11ee-8887-1239d0255272
     skip-cert-verify: true
-    sni: sg2-trojan.bonds.id
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: sg2-trojan.bonds.id
+    sni: shp.ee
+    network: tcp
     udp: true
 
   - name: SG HE-3
-    server: 104.21.233.134
+    server: sg3-trojan.bonds.id
     port: 443
     type: trojan
     password: b6828fe0-f977-11ee-9e7f-1239d0255272
     skip-cert-verify: true
-    sni: sg3-trojan.bonds.id
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: sg3-trojan.bonds.id
+    sni: shp.ee
+    network: tcp
     udp: true
 
 rules:
