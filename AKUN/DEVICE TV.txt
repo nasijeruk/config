@@ -43,7 +43,6 @@ proxies:
     network: tcp
     udp: true
 
-
   - name: SG HE-2
     server: sg2-trojan.bonds.id
     port: 443
