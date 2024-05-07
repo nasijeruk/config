@@ -31,8 +31,8 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
-proxies:
 
+proxies:
   - name: SG HE-1
     server: sg1-trojan.bonds.id
     port: 443
@@ -43,7 +43,6 @@ proxies:
     network: tcp
     udp: true
 
-
   - name: SG HE-2
     server: sg2-trojan.bonds.id
     port: 443
@@ -53,7 +52,6 @@ proxies:
     sni: shp.ee
     network: tcp
     udp: true
-
 
   - name: SG HE-3
     server: sg3-trojan.bonds.id
