@@ -57,7 +57,7 @@ proxies:
     server: sg3-trojan.bonds.id
     port: 443
     type: trojan
-    password: a96f96a0-0e6f-11ef-ab65-1239d0255272
+    password: 8cbcdc70-0ec6-11ef-96d8-1239d0255272
     skip-cert-verify: true
     sni: shp.ee
     network: tcp
