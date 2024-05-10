@@ -33,31 +33,11 @@ dns:
     - 112.215.203.254
 proxies:
 
-  - name: SG HE-1
-    server: sg1-trojan.bonds.id
+  - name: SG MELBI
+    server: sg-4.test3.net
     port: 443
     type: trojan
-    password: 664acf30-f979-11ee-b756-1239d0255272
-    skip-cert-verify: true
-    sni: shp.ee
-    network: tcp
-    udp: true
-
-  - name: SG HE-2
-    server: sg2-trojan.bonds.id
-    port: 443
-    type: trojan
-    password: 540e7fb0-f979-11ee-8c20-1239d0255272
-    skip-cert-verify: true
-    sni: shp.ee
-    network: tcp
-    udp: true
-
-  - name: SG HE-3
-    server: sg3-trojan.bonds.id
-    port: 443
-    type: trojan
-    password: 3f487870-f979-11ee-85af-1239d0255272
+    password: 67972ff0-0f28-11ef-9969-1239d0255272
     skip-cert-verify: true
     sni: shp.ee
     network: tcp
