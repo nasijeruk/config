@@ -4,7 +4,7 @@ redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7895
 ipv6: false
-mode: rule
+mode: GLOBAL
 log-level: silent
 allow-lan: true
 external-controller: 0.0.0.0:9090
@@ -31,57 +31,18 @@ dns:
     - 8.8.8.8
     - 1.1.1.1
     - 112.215.203.254
+
 proxies:
 
-  - name: SG OBFS
-    server: 104.21.233.134
+  - name: SG MELBI
+    server: sg-4.test3.net
     port: 443
     type: trojan
-    password: 20143740-ee17-11ee-b933-205c6d5f5d78
+    password: 57bb2ae0-0f29-11ef-83ae-1239d0255272
     skip-cert-verify: true
-    sni: asia1.fufo.org
-    network: ws
-    ws-opts:
-      path: /trojanws
-      headers:
-        Host: asia1.fufo.org
+    sni: shp.ee
+    network: tcp
     udp: true
-  
-  - name: SG HE
-    server: 104.21.233.134
-    port: 443
-    type: trojan
-    password: 21971ec0-e9d5-11ee-aec4-1239d0255272
-    skip-cert-verify: true
-    sni: sg2-trojan.bonds.id
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: sg2-trojan.bonds.id
-    udp: true
-
-  - name: US
-    server: 104.21.233.134
-    port: 443
-    type: trojan
-    password: d5478cb0-e92f-11ee-a514-1239d0255272
-    skip-cert-verify: true
-    sni: us1.test3.net
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: us1.test3.net
-    udp: true
-
-proxy-groups:
-  - name: AKUN VPN
-    type: select
-    proxies:
-      - SG OBFS
-      - SG HE
 
 rules:
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,US
-  - MATCH,AKUN VPN
+  - MATCH,GLOBAL
