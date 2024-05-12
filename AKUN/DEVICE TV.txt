@@ -33,11 +33,11 @@ dns:
     - 112.215.203.254
 proxies:
 
-  - name: SG MELBI
-    server: sg-4.test3.net
+  - name: TCP
+    server: trojan-sg01.globalssh.xyz
     port: 443
     type: trojan
-    password: 67972ff0-0f28-11ef-9969-1239d0255272
+    password: 25a00e68-d0b0-4004-9c29-7e8db1b0b03a
     skip-cert-verify: true
     sni: shp.ee
     network: tcp
